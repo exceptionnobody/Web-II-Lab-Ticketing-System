@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean
 import javax.crypto.SecretKey
 
 @SpringBootApplication(exclude = [(RepositoryRestMvcAutoConfiguration::class)])
-class Application {
+class TravelerServiceApplication {
     @Value("\${ticketKey}")
     lateinit var stringKey: String
 
@@ -25,5 +25,5 @@ fun main(args: Array<String>) {
 }
 
 fun configureApplication(builder: SpringApplicationBuilder): SpringApplicationBuilder {
-    return builder.sources(Application::class.java)
+    return builder.sources(TravelerServiceApplication::class.java)
 }

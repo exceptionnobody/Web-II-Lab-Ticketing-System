@@ -10,7 +10,7 @@ import javax.crypto.SecretKey
 
 
 @SpringBootApplication
-class ServerApplication {
+class LoginServiceApplication {
     @Value("\${key}")
     lateinit var stringKey: String
 
@@ -22,6 +22,6 @@ class ServerApplication {
 }
 
 fun main(args: Array<String>) {
-    runApplication<ServerApplication>(*args)
+    runApplication<LoginServiceApplication>(*args)
 
 }
